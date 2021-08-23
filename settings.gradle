@@ -8,3 +8,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Kotlin GB Application 23.08"
 include ':app'
+include ':app-java'
+include ':lib'
