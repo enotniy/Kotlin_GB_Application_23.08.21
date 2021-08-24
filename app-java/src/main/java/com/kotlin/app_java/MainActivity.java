@@ -45,13 +45,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL);
-
-        dividerItemDecoration.setDrawable(getDrawable(R.drawable.divider));
-
-        recyclerView.addItemDecoration(dividerItemDecoration);
-
         List<Weather> weatherList = Repository.getInstance().getWeatherList();
+
         adapter.setWeatherList(weatherList);
         setCounter(weatherList.size());
     }
